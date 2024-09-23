@@ -1,0 +1,202 @@
+/* Reset default browser styles */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+.app-container {
+    width: 100%;
+    max-width: 900px; /* Make the app container wider */
+    padding: 2rem;
+    background-color: #2a2a2a; /* Give a card-like background to the app */
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.header-image {
+    width: 100%; /* Take full width of the parent container */
+    height: 200px; /* Adjust the height to create a banner-like effect */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    margin-bottom: 2em; /* Add space below the banner */
+    border-radius: 10px; /* Slight rounding of corners, optional */
+    box-shadow: #1e1e1e 0px 4px 12px; /* Add a subtle shadow to the image */
+}
+
+
+/* Header Styling */
+.header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #ffaa01; /* Add a pop of color to the header */
+}
+
+/* Form styling */
+.new-item-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.new-item-form label {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+.new-item-form input {
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.new-item-form button {
+    margin-top: 1rem;
+    width: 7rem;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-item-form button:hover {
+    background-color: #218838;
+}
+
+/* Todo Item Styling */
+.todo-list-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.todo-item:hover {
+    transform: translateY(-5px); /* Hover effect for each item */
+    background-color: #3d3d3d;
+}
+
+.todo-item-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.todo-item input[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.todo-item label {
+    font-size: 1.2rem;
+    text-align: left;
+    flex-grow: 1;
+    color: #f0f0f0;
+}
+
+.completed-text {
+    text-decoration: line-through;
+    color: #777;
+}
+
+/* Delete Button */
+.todo-item button {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.todo-item button:hover {
+    background-color: #c82333;
+}
+
+/* No Todos Message */
+.no-todos-message {
+    font-size: 1.5rem;
+    color: #777;
+    margin: 2rem 0;
+    font-style: italic;
+}
+
+/* Add subtle hover effects to buttons */
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Add a smooth transition to all hover effects */
+* {
+    transition: all 0.2s ease;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .new-item-form {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .new-item-form input, .new-item-form button {
+        width: 100%;
+    }
+
+    .header {
+        font-size: 2rem;
+    }
+
+    .new-item-form button {
+        width: 7rem;
+    } 
+
+    .app-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
